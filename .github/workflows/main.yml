@@ -1,0 +1,30 @@
+name: Hardware Verification
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate Board
+        run: |
+          python3 build_board.py
+
+      - name: Run ERC
+        run: |
+          kicad-cli sch erc timer.kicad_sch
+
+      - name: Run DRC
+        run: |
+          kicad-cli pcb drc timer.kicad_pcb
+
+      - name: Kibot Export
+        run: |
+          kibot -c /usr/share/kibot/test/kibot.conf -v

@@ -1,0 +1,55 @@
+** Drc report for timer.kicad_pcb **
+** Created on 2026-04-04T21:01:52+0000 **
+** Report includes: Errors, Warnings **
+
+** Found 0 DRC violations **
+
+** Found 11 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(47.5250 mm, 48.0950 mm): Pad 1 [GND] of U1 on F.Cu
+    @(69.0625 mm, 50.0000 mm): Pad 1 [GND] of D1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(69.0625 mm, 50.0000 mm): Pad 1 [GND] of D1 on F.Cu
+    @(70.9500 mm, 30.0000 mm): Pad 2 [GND] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(29.0875 mm, 30.0000 mm): Pad 1 [VCC] of R1 on F.Cu
+    @(47.5250 mm, 51.9050 mm): Pad 4 [VCC] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(47.5250 mm, 51.9050 mm): Pad 4 [VCC] of U1 on F.Cu
+    @(52.4750 mm, 48.0950 mm): Pad 8 [VCC] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(47.5250 mm, 49.3650 mm): Pad 2 [TRIGGER] of U1 on F.Cu
+    @(52.4750 mm, 50.6350 mm): Pad 6 [TRIGGER] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(47.5250 mm, 49.3650 mm): Pad 2 [TRIGGER] of U1 on F.Cu
+    @(30.9125 mm, 50.0000 mm): Pad 2 [TRIGGER] of R2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(52.4750 mm, 50.6350 mm): Pad 6 [TRIGGER] of U1 on F.Cu
+    @(69.0500 mm, 30.0000 mm): Pad 1 [TRIGGER] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(29.0875 mm, 70.0000 mm): Pad 1 [OUT] of R3 on F.Cu
+    @(47.5250 mm, 50.6350 mm): Pad 3 [OUT] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(29.0875 mm, 50.0000 mm): Pad 1 [DISCH] of R2 on F.Cu
+    @(52.4750 mm, 49.3650 mm): Pad 7 [DISCH] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(30.9125 mm, 30.0000 mm): Pad 2 [DISCH] of R1 on F.Cu
+    @(29.0875 mm, 50.0000 mm): Pad 1 [DISCH] of R2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(30.9125 mm, 70.0000 mm): Pad 2 [LED_A] of R3 on F.Cu
+    @(70.9375 mm, 50.0000 mm): Pad 2 [LED_A] of D1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** End of Report **
