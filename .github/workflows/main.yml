@@ -15,4 +15,4 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run ERC and DRC
         run: |
-          kibot -c config.kibot.yaml
+          kibot -c config.kibot.yaml -e blink_555.kicad_sch -b blink_555.kicad_pcb
