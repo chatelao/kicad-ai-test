@@ -2,8 +2,8 @@ kibot:
   version: 1
 
 preflights:
-  - check_erc
-  - check_drc
+  - run_erc
+  - run_drc
 
 outputs:
   - name: 'IPC-2581'
@@ -17,12 +17,12 @@ outputs:
 
   - name: 'ERC report'
     comment: 'Electrical Rules Check report'
-    type: erc
+    type: report
     options:
       format: HTML
 
   - name: 'DRC report'
     comment: 'Design Rules Check report'
-    type: drc
+    type: report
     options:
       format: HTML
