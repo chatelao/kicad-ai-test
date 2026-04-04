@@ -1,9 +1,9 @@
 kibot:
   version: 1
 
-preflights:
-  - run_erc
-  - run_drc
+preflight:
+  erc: true
+  drc: true
 
 outputs:
   - name: 'IPC-2581'
@@ -14,15 +14,3 @@ outputs:
       precision: 6
       units: millimeters
       version: C
-
-  - name: 'ERC report'
-    comment: 'Electrical Rules Check report'
-    type: report
-    options:
-      format: HTML
-
-  - name: 'DRC report'
-    comment: 'Design Rules Check report'
-    type: report
-    options:
-      format: HTML
