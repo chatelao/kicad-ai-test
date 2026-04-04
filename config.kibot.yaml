@@ -4,14 +4,14 @@ kibot:
 outputs:
   - name: 'erc'
     comment: 'Electrical Rules Check'
-    type: 'erc'
+    type: 'kicad_erc'
     dir: 'reports'
     options:
       filter: ''
 
   - name: 'drc'
     comment: 'Design Rules Check'
-    type: 'drc'
+    type: 'kicad_drc'
     dir: 'reports'
     options:
       filter: ''
