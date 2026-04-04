@@ -10,7 +10,7 @@ jobs:
   kibot:
     runs-on: ubuntu-latest
     container:
-      image: setoso/kibot:latest
+      image: setsoft/kicad_auto:latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
