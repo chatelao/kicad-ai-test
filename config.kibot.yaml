@@ -2,8 +2,8 @@ kibot:
   version: 1
 
 preflight:
-  erc: true
-  drc: true
+  run_erc: true
+  run_drc: true
 
 outputs:
   - name: 'IPC-2581'
