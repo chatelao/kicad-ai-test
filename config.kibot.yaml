@@ -2,16 +2,5 @@ kibot:
   version: 1
 
 outputs:
-  - name: 'erc'
-    comment: 'Electrical Rules Check'
-    type: 'kicad_erc'
-    dir: 'reports'
-    options:
-      filter: ''
-
-  - name: 'drc'
-    comment: 'Design Rules Check'
-    type: 'kicad_drc'
-    dir: 'reports'
-    options:
-      filter: ''
+  - erc
+  - drc
