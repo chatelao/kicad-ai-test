@@ -1,0 +1,27 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_track_width": 0.2,
+        "min_via_diameter": 0.8,
+        "min_via_drill": 0.4
+      }
+    }
+  },
+  "meta": {
+    "filename": "blink_555.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0
+    }
+  },
+  "sheets": [
+    [
+      "00000000-0000-0000-0000-000000000000",
+      ""
+    ]
+  ]
+}

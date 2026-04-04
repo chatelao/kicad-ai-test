@@ -1,0 +1,28 @@
+kibot:
+  version: 1
+
+preflights:
+  - check_erc
+  - check_drc
+
+outputs:
+  - name: 'IPC-2581'
+    comment: 'PCB in IPC-2581 format'
+    type: ipc2581
+    options:
+      compress: true
+      precision: 6
+      units: millimeters
+      version: C
+
+  - name: 'ERC report'
+    comment: 'Electrical Rules Check report'
+    type: erc
+    options:
+      format: HTML
+
+  - name: 'DRC report'
+    comment: 'Design Rules Check report'
+    type: drc
+    options:
+      format: HTML
