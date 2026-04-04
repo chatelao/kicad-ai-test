@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "filename": "555_blinker.kicad_pro",
+    "version": 1
+  },
+  "project": {
+    "output_directory": "output"
+  },
+  "schematic": {
+    "drawing": {
+      "field_names": [],
+      "page_layout_descr_file": ""
+    },
+    "legacy_lib_dir": "",
+    "legacy_lib_list": []
+  },
+  "pcbnew": {
+    "drawing": {
+      "page_layout_descr_file": ""
+    }
+  }
+}

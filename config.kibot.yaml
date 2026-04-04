@@ -1,0 +1,17 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: 'erc'
+    comment: 'Electrical Rules Check'
+    type: 'erc'
+    dir: 'reports'
+    options:
+      filter: ''
+
+  - name: 'drc'
+    comment: 'Design Rules Check'
+    type: 'drc'
+    dir: 'reports'
+    options:
+      filter: ''

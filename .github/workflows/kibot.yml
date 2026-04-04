@@ -1,0 +1,20 @@
+name: KiBot CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  kibot:
+    runs-on: ubuntu-latest
+    container:
+      image: setoso/kibot:latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run KiBot
+        run: |
+          kibot -c config.kibot.yaml -e 555_blinker.kicad_sch -b 555_blinker.kicad_pcb
