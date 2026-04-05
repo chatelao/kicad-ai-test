@@ -1,0 +1,19 @@
+name: KiCad ERC and DRC Check
+
+on: [push]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container:
+      image: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ERC
+        run: |
+          # assuming 555_timer.kicad_sch exists
+          kicad-cli sch erc --file 555_timer.kicad_sch --exit-code-violations
+      - name: Run DRC
+        run: |
+          # assuming 555_timer.kicad_pcb exists
+          kicad-cli pcb drc --file 555_timer.kicad_pcb --exit-code-violations
