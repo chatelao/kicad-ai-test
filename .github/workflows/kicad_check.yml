@@ -11,9 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run ERC
         run: |
-          # assuming 555_timer.kicad_sch exists
-          kicad-cli sch erc --file 555_timer.kicad_sch --exit-code-violations
+          /usr/bin/kicad-cli sch erc 555_timer.kicad_sch --exit-code-violations
       - name: Run DRC
         run: |
-          # assuming 555_timer.kicad_pcb exists
-          kicad-cli pcb drc --file 555_timer.kicad_pcb --exit-code-violations
+          /usr/bin/kicad-cli pcb drc 555_timer.kicad_pcb --exit-code-violations

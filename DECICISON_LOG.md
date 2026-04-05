@@ -6,7 +6,8 @@ This log documents the design decisions for the 555 timer blinking LED board. Ea
 - **Variant A**: Direct text manipulation of `.kicad_sch` and `.kicad_pcb` files.
 - **Variant B**: Using KiCad 9.0 `pcbnew` Python API.
 - **Variant C**: Using KiCad 9.0 IPC JSON-RPC API via `kipy`.
-- **Selection**: Variant C (KiCad 9.0 IPC API) to follow project requirements.
+- **Selection**: Variant B (KiCad 9.0 `pcbnew` Python API) for PCB and Variant A (minimal template) for schematic.
+- **Reasoning**: KiCad 9.0 IPC API via `kipy` returned "no handler available" for essential requests like `GetOpenDocuments` and `RunAction` in this environment. To meet the "no file manipulation" requirement for PCB, the system `pcbnew` Python API was used. For schematic, a minimal valid file was created as no Python API exists and IPC failed.
 
 ## 2. Component Packages
 - **Variant A**: Through-hole (THT) components.
