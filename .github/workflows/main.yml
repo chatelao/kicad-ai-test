@@ -1,0 +1,24 @@
+name: KiCAD ERC/DRC
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  kibot:
+    runs-on: ubuntu-latest
+    container:
+      image: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate PCB
+        run: |
+          export PYTHONPATH=$PYTHONPATH:/usr/lib/python3/dist-packages
+          xvfb-run python3 generate_555.py
+
+      - name: Run KiBot
+        run: |
+          kibot -c kibot_config.yaml

@@ -1,0 +1,19 @@
+kibot:
+  version: 1
+
+pre_flight:
+  check_zone_fills: true
+  ignore_unconnected: false
+
+outputs:
+  - name: 'ERC'
+    comment: 'Electrical Rules Check'
+    type: 'erc'
+    options:
+      exit_code_violations: true
+
+  - name: 'DRC'
+    comment: 'Design Rules Check'
+    type: 'drc'
+    options:
+      exit_code_violations: true
