@@ -3,7 +3,7 @@ Use the KiCAD 9.0 with patched for IPC Autostart in a xvfb-run (no file manipula
 
 # Details
 Use Kibot in the GitHub action workflow to run th ERC and DRC, validate the workflow locally:
-- `/specifications` : Downloaded datasheets converted to .md if need.
+- `/specifications` : Download KiCAD IPC API definition and components datasheets, converted to .md if need.
 - `KICAD_IPC_CALLS.md` : Log all IPC calls used to build the files.
 - `DECICISON_LOG.md` : Add per decision step three variants and the seleted options.
 - `FAILD_ATTEMPTS.md` : Record failed attempts.
