@@ -7,12 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: setsoft/kicad_auto:latest
-      options: --user root
     steps:
       - uses: actions/checkout@v4
-      - name: Run ERC
+      - name: Run ERC and DRC
         run: |
-          kicad-cli sch erc 555_timer.kicad_sch --exit-code-violations
-      - name: Run DRC
-        run: |
-          kicad-cli pcb drc 555_timer.kicad_pcb --exit-code-violations
+          kibot --quick-start
