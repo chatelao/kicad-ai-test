@@ -87,5 +87,45 @@
 			(outputdirectory "")
 		)
 	)
+	(gr_line
+		(start 100 100)
+		(end 150 100)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "7d7bdd87-7eb3-42ce-908e-eb20b1b56c51")
+	)
+	(gr_line
+		(start 100 130)
+		(end 100 100)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "18e74e70-fd44-4c31-9d70-50420dd4f3bc")
+	)
+	(gr_line
+		(start 150 100)
+		(end 150 130)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "358a14d1-7af3-404d-8a23-551d533ccf60")
+	)
+	(gr_line
+		(start 150 130)
+		(end 100 130)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "4f833c26-3c66-4bac-93ac-f3fa5ac37acd")
+	)
 	(embedded_fonts no)
 )
