@@ -1,5 +1,5 @@
 # Project goal
-Use the KiCAD 9.0 with patched for IPC Autostart in a xvfb-run (no file manipulations) to create a simple 555 board from schematics with a blinking LED.
+Use the IPC-APIs of a KiCAD 9.0 patched for Autostart in a xvfb-run (no file manipulations) to create a simple 555 schematics and board with a blinking LED.
 
 # Details
 Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on every branch. Validate the workflow locally:
