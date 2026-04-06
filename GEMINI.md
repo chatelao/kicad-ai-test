@@ -10,3 +10,4 @@ Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on
 
 # See
 - https://gitlab.com/kicad/code/kicad/-/raw/master/api/CMakeLists.txt?inline=false
+- https://gitlab.com/kicad/code/kicad-python/-/tree/eb0dad5901e1ac2b0489c92c6414d2cf8b8d01a8/examples
