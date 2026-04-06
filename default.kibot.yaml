@@ -1,0 +1,16 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: 'ERC'
+    type: 'erc'
+    options:
+      exit_code_violation: true
+  - name: 'DRC'
+    type: 'drc'
+    options:
+      exit_code_violation: true
+  - name: 'Schematic PDF'
+    type: 'pdf_sch_print'
+  - name: 'PCB PDF'
+    type: 'pdf_pcb_print'
