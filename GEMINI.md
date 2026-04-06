@@ -1,5 +1,7 @@
 # Project goal
-Use the new IPC-API of a KiCAD 10.0 patched for Autostart in a xvfb-run (no file manipulations) to create a simple 555 schematics and board with a blinking LED.
+Create a simple 555 circuit and board with a LED blinking a 1Hz with 30% active / 70% dark cycle time:
+- Use SKiDL to design the schematics.
+- Use KiCAD IPC API to design the board.
 
 # Details
 Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on every branch. Validate the workflow locally:
