@@ -1,0 +1,1 @@
+(kicad_pcb (version 20240108) (generator "kicad-cli") (uuid "00000000-0000-0000-0000-000000000000") (paper "A4") (setup (stackup (layer "F.Cu" (type "copper") (thickness 0.035)) (layer "B.Cu" (type "copper") (thickness 0.035)))))
