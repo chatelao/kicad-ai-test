@@ -1,0 +1,14 @@
+name: Hardware Verification
+
+on: [push]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ERC and DRC
+        run: |
+          xvfb-run /usr/bin/kicad-cli pcb drc board.kicad_pcb
+          # Add any other checks required by Kibot if needed
