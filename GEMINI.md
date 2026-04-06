@@ -9,5 +9,4 @@ Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on
 - `DECICISON_LOG.md` : Add per decision step three variants and the seleted options.
 
 # See
-- https://dev-docs.kicad.org/en/apis-and-binding/ipc-api
-- https://docs.kicad.org/kicad-python-main/kicad.html
+- https://gitlab.com/kicad/code/kicad/-/raw/master/api/CMakeLists.txt?inline=false
