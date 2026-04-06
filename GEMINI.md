@@ -1,5 +1,5 @@
 # Project goal
-Use the IPC-APIs of a KiCAD 9.0 patched for Autostart in a xvfb-run (no file manipulations) to create a simple 555 schematics and board with a blinking LED.
+Use the IPC-API of a KiCAD 9.0 patched for Autostart in a xvfb-run (no file manipulations) to create a simple 555 schematics and board with a blinking LED.
 
 # Details
 Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on every branch. Validate the workflow locally:
@@ -7,3 +7,6 @@ Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on
 - `KICAD_IPC_CALLS.md` : Log all IPC calls used to build the files.
 - `DECICISON_LOG.md` : Add per decision step three variants and the seleted options.
 - `FAILD_ATTEMPTS.md` : Record failed attempts.
+
+# See
+- https://dev-docs.kicad.org/en/apis-and-binding/ipc-api
