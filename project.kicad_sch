@@ -1,0 +1,13 @@
+(kicad_sch (version 20240108) (generator eeschema)
+  (paper "A4")
+  (title_block
+    (title "555 Timer Blinker")
+  )
+  (symbol (lib_id "Timer:NE555P") (at 100 100 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (fields
+      (field (name "Reference") "U1" (at 100 90 0))
+      (field (name "Value") "NE555P" (at 100 110 0))
+    )
+  )
+)

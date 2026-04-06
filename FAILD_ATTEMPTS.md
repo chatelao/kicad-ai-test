@@ -1,0 +1,10 @@
+- IPC connection failed after retries.
+- Failed to load footprint DIP-8_W7.62mm from Package_DIP: 'NoneType' object has no attribute 'FootprintLoad'
+- Failed to load footprint R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal from Resistor_THT: 'NoneType' object has no attribute 'FootprintLoad'
+- Failed to load footprint R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal from Resistor_THT: 'NoneType' object has no attribute 'FootprintLoad'
+- Failed to load footprint C_Disc_D5.0mm_W2.5mm_P2.50mm from Capacitor_THT: 'NoneType' object has no attribute 'FootprintLoad'
+- Failed to load footprint LED_D5.0mm from LED_THT: 'NoneType' object has no attribute 'FootprintLoad'
+- Failed to load footprint R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal from Resistor_THT: 'NoneType' object has no attribute 'FootprintLoad'
+- Programmatic symbol placement in schematic not yet supported via CLI/IPC in this environment.
+- IPC connection failed after retries.
+- Programmatic symbol placement in schematic not yet supported via CLI/IPC in this environment.

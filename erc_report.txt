@@ -1,0 +1,132 @@
+ERC report (2026-04-06T14:29:17, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[hier_label_mismatch]: Sheet pin SWD_TRG{~{RESET}, SWDIO, SWDCLK} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 74.93 mm): Hierarchical Sheet Pin 'SWD_TRG{~{RESET}, SWDIO, SWDCLK}'
+[hier_label_mismatch]: Sheet pin UART_TRG{TX, RX} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 77.47 mm): Hierarchical Sheet Pin 'UART_TRG{TX, RX}'
+[hier_label_mismatch]: Sheet pin USB{VBUS, CC1, CC2} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 80.01 mm): Hierarchical Sheet Pin 'USB{VBUS, CC1, CC2}'
+[hier_label_mismatch]: Sheet pin USB{VBUS, CC1, CC2} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 97.79 mm): Hierarchical Sheet Pin 'USB{VBUS, CC1, CC2}'
+[hier_label_mismatch]: Sheet pin NPM1300{SCL, SDA, INT} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 100.33 mm): Hierarchical Sheet Pin 'NPM1300{SCL, SDA, INT}'
+[hier_label_mismatch]: Sheet pin ENABLE has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 102.87 mm): Hierarchical Sheet Pin 'ENABLE'
+[hier_label_mismatch]: Sheet pin SHPLD has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 105.41 mm): Hierarchical Sheet Pin 'SHPLD'
+[label_dangling]: Label not connected
+    ; error
+    @(161.29 mm, 72.39 mm): Label 'SWD_TRG.~{RESET}'
+[hier_label_mismatch]: Sheet pin SHPHLD has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 120.65 mm): Hierarchical Sheet Pin 'SHPHLD'
+[hier_label_mismatch]: Sheet pin ENABLE has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 123.19 mm): Hierarchical Sheet Pin 'ENABLE'
+[hier_label_mismatch]: Sheet pin ~{RESET} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 125.73 mm): Hierarchical Sheet Pin '~{RESET}'
+[label_dangling]: Label not connected
+    ; error
+    @(137.16 mm, 125.73 mm): Label 'SWD_TRG.~{RESET}'
+[hier_label_mismatch]: Sheet pin ANALOG{A[0..5]} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 128.27 mm): Hierarchical Sheet Pin 'ANALOG{A[0..5]}'
+[hier_label_mismatch]: Sheet pin DIG{D5 D6 D[9..13]} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 130.81 mm): Hierarchical Sheet Pin 'DIG{D5 D6 D[9..13]}'
+[hier_label_mismatch]: Sheet pin UART{TX, RX} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 133.35 mm): Hierarchical Sheet Pin 'UART{TX, RX}'
+[hier_label_mismatch]: Sheet pin I2C{SCL, SDA} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 135.89 mm): Hierarchical Sheet Pin 'I2C{SCL, SDA}'
+[hier_label_mismatch]: Sheet pin SPI{SCK, MOSI, MISO} has no matching hierarchical label inside the sheet
+    ; error
+    @(135.89 mm, 138.43 mm): Hierarchical Sheet Pin 'SPI{SCK, MOSI, MISO}'
+[hier_label_mismatch]: Sheet pin SWD_TRG{~{RESET}, SWDIO, SWDCLK} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 97.79 mm): Hierarchical Sheet Pin 'SWD_TRG{~{RESET}, SWDIO, SWDCLK}'
+[hier_label_mismatch]: Sheet pin NPM1300{SCL, SDA, INT} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 100.33 mm): Hierarchical Sheet Pin 'NPM1300{SCL, SDA, INT}'
+[hier_label_mismatch]: Sheet pin ANALOG{A[0..5]} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 102.87 mm): Hierarchical Sheet Pin 'ANALOG{A[0..5]}'
+[hier_label_mismatch]: Sheet pin DIG{D5 D6 D[9..13]} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 105.41 mm): Hierarchical Sheet Pin 'DIG{D5 D6 D[9..13]}'
+[hier_label_mismatch]: Sheet pin UART_TRG{TX, RX} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 107.95 mm): Hierarchical Sheet Pin 'UART_TRG{TX, RX}'
+[hier_label_mismatch]: Sheet pin I2C_54{SCL, SDA} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 110.49 mm): Hierarchical Sheet Pin 'I2C_54{SCL, SDA}'
+[hier_label_mismatch]: Sheet pin SPI{SCK, MOSI, MISO} has no matching hierarchical label inside the sheet
+    ; error
+    @(173.99 mm, 113.03 mm): Hierarchical Sheet Pin 'SPI{SCK, MOSI, MISO}'
+[net_not_bus_member]: Net /SWD_TRG.~{RESET} is graphically connected to bus /SWD_TRG{~{RESET}, SWDIO, SWDCLK} but is not a member of that bus
+    ; warning
+    @(157.48 mm, 74.93 mm): Bus to wire entry
+    @(157.48 mm, 74.93 mm): Horizontal Bus, length 13.97 mm
+[lib_symbol_issues]: The current configuration does not include the symbol library 'LordsBoards-Graphic'
+    ; warning
+    @(185.42 mm, 172.72 mm): Symbol #SYM2 [LordsBoardsLogo]
+[footprint_link_issues]: The current configuration does not include the footprint library 'LordsBoards-Symbol'
+    ; warning
+    @(275.59 mm, 146.05 mm): Symbol LOGO1 [LordsBoardsLogo]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'LordsBoards-Graphic'
+    ; warning
+    @(275.59 mm, 146.05 mm): Symbol LOGO1 [LordsBoardsLogo]
+[footprint_link_issues]: The current configuration does not include the footprint library 'MountingHole'
+    ; warning
+    @(271.78 mm, 154.94 mm): Symbol H1 [MountingHole]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Mechanical'
+    ; warning
+    @(271.78 mm, 154.94 mm): Symbol H1 [MountingHole]
+[footprint_link_issues]: The current configuration does not include the footprint library 'MountingHole'
+    ; warning
+    @(271.78 mm, 162.56 mm): Symbol H3 [MountingHole]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Mechanical'
+    ; warning
+    @(271.78 mm, 162.56 mm): Symbol H3 [MountingHole]
+[footprint_link_issues]: The current configuration does not include the footprint library 'MountingHole'
+    ; warning
+    @(279.40 mm, 154.94 mm): Symbol H2 [MountingHole]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Mechanical'
+    ; warning
+    @(279.40 mm, 154.94 mm): Symbol H2 [MountingHole]
+[footprint_link_issues]: The current configuration does not include the footprint library 'MountingHole'
+    ; warning
+    @(279.40 mm, 162.56 mm): Symbol H4 [MountingHole]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Mechanical'
+    ; warning
+    @(279.40 mm, 162.56 mm): Symbol H4 [MountingHole]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'Graphic'
+    ; warning
+    @(278.13 mm, 172.72 mm): Symbol #SYM1 [Logo_Open_Hardware_Small]
+
+***** Sheet /Debugger/
+
+***** Sheet /nPM1300/
+
+***** Sheet /nRF54L15/
+
+***** Sheet /Connectors/
+
+ ** ERC messages: 37  Errors 24  Warnings 13
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
