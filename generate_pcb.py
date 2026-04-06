@@ -21,13 +21,11 @@ def create_board():
         board.Add(seg)
 
     # Footprints
-    # U1: NE555
     u1 = pcbnew.FootprintLoad('/usr/share/kicad/footprints/Package_SO.pretty', 'SOIC-8_3.9x4.9mm_P1.27mm')
     u1.SetReference('U1')
     u1.SetPosition(pcbnew.VECTOR2I(mm_to_iu(25), mm_to_iu(25)))
     board.Add(u1)
 
-    # Passives
     passives = [
         ('R1', 'Resistor_SMD.pretty', 'R_0805_2012Metric', (15, 20)),
         ('R2', 'Resistor_SMD.pretty', 'R_0805_2012Metric', (15, 30)),
@@ -44,7 +42,15 @@ def create_board():
         board.Add(f)
 
     pcbnew.SaveBoard('555_timer.kicad_pcb', board)
-    print("Generated 555_timer.kicad_pcb with all components")
+
+    # Downgrade version in file to match Kibot's older KiCad
+    with open('555_timer.kicad_pcb', 'r') as f:
+        content = f.read()
+    content = content.replace('(version 20241229)', '(version 20240108)')
+    with open('555_timer.kicad_pcb', 'w') as f:
+        f.write(content)
+
+    print("Generated 555_timer.kicad_pcb and downgraded version")
 
 if __name__ == "__main__":
     create_board()
