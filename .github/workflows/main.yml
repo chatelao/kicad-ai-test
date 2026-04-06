@@ -8,7 +8,12 @@ jobs:
     container: setsoft/kicad_auto:latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run ERC and DRC
+      - name: Run DRC
         run: |
-          xvfb-run /usr/bin/kicad-cli pcb drc board.kicad_pcb
-          # Add any other checks required by Kibot if needed
+          # The container may not have xauth but xvfb-run might expect it.
+          # Using -a and -e /dev/stdout to see more logs if it fails again.
+          # Or try running without xvfb-run if kicad-cli 10 doesn't need it.
+          # Actually, setsoft/kicad_auto:latest should have it.
+          # Let's try to install xauth if it's really missing.
+          apt-get update && apt-get install -y xauth || true
+          xvfb-run -a /usr/bin/kicad-cli pcb drc board.kicad_pcb
