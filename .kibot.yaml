@@ -6,8 +6,5 @@ pre_flight:
   run_erc: false
   run_drc: true
 
-outputs:
-  - name: 'print_drc'
-    comment: 'DRC report'
-    type: 'drc'
-    dir: 'reports'
+# No outputs needed, we just want pre_flight to run DRC
+outputs: []
