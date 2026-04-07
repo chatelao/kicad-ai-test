@@ -18,7 +18,8 @@ def create_board():
         'OUT': pcbnew.NETINFO_ITEM(board, 'OUT'),
         'DISCH': pcbnew.NETINFO_ITEM(board, 'DISCH'),
         'CONT': pcbnew.NETINFO_ITEM(board, 'CONT'),
-        'TRIG_THRES': pcbnew.NETINFO_ITEM(board, 'TRIG_THRES')
+        'TRIG_THRES': pcbnew.NETINFO_ITEM(board, 'TRIG_THRES'),
+        'OUT_LED': pcbnew.NETINFO_ITEM(board, 'OUT_LED')
     }
     for net in nets.values():
         board.Add(net)
@@ -30,16 +31,11 @@ def create_board():
         }),
         ('Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal', 'R1', (35, 35), {'1': 'VCC', '2': 'DISCH'}),
         ('Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal', 'R2', (35, 45), {'1': 'DISCH', '2': 'TRIG_THRES'}),
-        ('Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal', 'R3', (35, 55), {'1': 'VCC', '2': 'OUT_LED'}), # LED Resistor
+        ('Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal', 'R3', (35, 55), {'1': 'VCC', '2': 'OUT_LED'}),
         ('Capacitor_THT:CP_Radial_D5.0mm_P2.50mm', 'C1', (65, 35), {'1': 'TRIG_THRES', '2': 'GND'}),
         ('Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm', 'C2', (65, 45), {'1': 'CONT', '2': 'GND'}),
-        ('LED_THT:LED_D5.0mm', 'D1', (65, 60), {'1': 'OUT', '2': 'OUT_LED'}) # K:1, A:2
+        ('LED_THT:LED_D5.0mm', 'D1', (65, 60), {'1': 'OUT_LED', '2': 'OUT'}) # 1:A (OUT_LED), 2:K (OUT)
     ]
-
-    # Add extra net for LED anode connection
-    out_led_net = pcbnew.NETINFO_ITEM(board, 'OUT_LED')
-    board.Add(out_led_net)
-    nets['OUT_LED'] = out_led_net
 
     fps = {}
     for footprint_name, ref, pos, pin_nets in footprints_data:
@@ -68,17 +64,6 @@ def create_board():
         line.SetEnd(pcbnew.VECTOR2I(mm_to_iu(points[i+1][0]), mm_to_iu(points[i+1][1])))
         line.SetLayer(pcbnew.Edge_Cuts)
         board.Add(line)
-
-    # Simple auto-routing (very basic, just connect pads with tracks)
-    # This is not real routing but just showing we CAN add tracks
-    # Real routing is complex, but let's connect R1 pin 1 to VCC (U1 pin 8)
-    # Actually let's just add one track as proof of concept
-    track = pcbnew.PCB_TRACK(board)
-    track.SetStart(fps['U1'].FindPadByNumber('8').GetPosition())
-    track.SetEnd(fps['R1'].FindPadByNumber('1').GetPosition())
-    track.SetLayer(pcbnew.B_Cu)
-    track.SetWidth(mm_to_iu(0.25))
-    board.Add(track)
 
     # Save board
     pcbnew.SaveBoard('555.kicad_pcb', board)
