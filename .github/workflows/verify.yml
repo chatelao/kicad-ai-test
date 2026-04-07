@@ -1,0 +1,25 @@
+name: Verify KiCad Project
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix apt-get for Bullseye
+        run: |
+          sed -i 's/bullseye-backports/bullseye/g' /etc/apt/sources.list || true
+          apt-get update || true
+
+      - name: Run ERC and DRC with KiBot
+        run: |
+          kibot -c .kibot.yaml -e  -b 555.kicad_pcb

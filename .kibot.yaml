@@ -1,0 +1,17 @@
+kibot:
+  version: 1
+
+pre_flight:
+  check_zone_fills: false
+  run_erc: true
+  run_drc: true
+
+outputs:
+  - name: 'print_erc'
+    comment: 'ERC report'
+    type: 'erc'
+    dir: 'reports'
+  - name: 'print_drc'
+    comment: 'DRC report'
+    type: 'drc'
+    dir: 'reports'
