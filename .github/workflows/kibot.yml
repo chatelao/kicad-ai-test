@@ -1,0 +1,26 @@
+name: KiBot Automation
+
+on:
+  push:
+    branches: [ "*" ]
+
+jobs:
+  kibot:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+            # Fix broken bullseye-backports if needed
+            rm -f /etc/apt/sources.list.d/backports.list || true
+            apt-get update || true
+            apt-get install -y xvfb || true
+      - name: Run ERC and DRC
+        run: |
+            # Start Xvfb to avoid 'Authorization required' errors
+            Xvfb :99 -ac &
+            export DISPLAY=:99
+            # Run DRC and ERC
+            /usr/bin/kicad-cli pcb drc 555.kicad_pcb
+            /usr/bin/kicad-cli sch erc 555.kicad_sch

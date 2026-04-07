@@ -1,0 +1,17 @@
+WARNING: Missing tag on NE555P instantiated at /app/design_schematic.py:17.
+WARNING: Random tag WalwxhWRZj generated for NE555P.
+WARNING: Missing tag on R instantiated at /app/design_schematic.py:18.
+WARNING: Random tag qtpDBATOwN generated for R.
+WARNING: Missing tag on R instantiated at /app/design_schematic.py:19.
+WARNING: Random tag qDiLLdWvNt generated for R.
+WARNING: Missing tag on R instantiated at /app/design_schematic.py:20.
+WARNING: Random tag y3tyhcg9fc generated for R.
+WARNING: Missing tag on C_Polarized instantiated at /app/design_schematic.py:21.
+WARNING: Random tag w9UwRxd_6M generated for C_Polarized.
+WARNING: Missing tag on C instantiated at /app/design_schematic.py:22.
+WARNING: Random tag nQHlKd6raD generated for C.
+WARNING: Missing tag on LED instantiated at /app/design_schematic.py:23.
+WARNING: Random tag BlTKB5OcBn generated for LED.
+WARNING: Missing tag on  instantiated at /app/<frozen importlib._bootstrap>:488.
+INFO: 15 warnings found while generating netlist.
+INFO: 0 errors found while generating netlist.
