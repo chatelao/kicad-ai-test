@@ -8,6 +8,7 @@ Create a simple 555 circuit with LED blinking at 1Hz with 30% active / 70% dark 
 Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on every branch. Validate the workflow locally:
 - `/specifications` : Download KiCAD IPC API definition and components datasheets, converted to .md if need.
 - `/.github/workflows` : The GitHub CICD path.
+- `555.kicad_sch`, `555.kicad_pcb`, `555.kicad_pro`, `555.kicad_prl` : The project files
 - `KICAD_IPC_CALLS.md` : Log all IPC calls used to build the files.
 - `DECICISON_LOG.md` : Add per decision step three variants and the seleted options.
 
