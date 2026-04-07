@@ -25,8 +25,8 @@ def generate_pcb():
         ('R2', 'Resistor_SMD:R_0805_2012Metric', (115, 100)),
         ('R3', 'Resistor_SMD:R_0805_2012Metric', (115, 105)),
         ('C1', 'Capacitor_SMD:CP_Elec_4x5.4', (115, 110)),
-        ('C2', 'Capacitor_SMD:C_0805_2012Metric', (90, 110)),
-        ('D1', 'LED_SMD:LED_0805_2012Metric', (90, 100))
+        ('C2', 'Capacitor_SMD:C_0805_2012Metric', (85, 110)),
+        ('D1', 'LED_SMD:LED_0805_2012Metric', (85, 100))
     ]
 
     # Create Nets
@@ -50,51 +50,54 @@ def generate_pcb():
         board.Add(fp)
         fps[ref] = fp
 
-    # Connect Pads to Nets (Basic connections for 555 astable)
-    # U1: 1=GND, 2=TRIG, 3=OUT, 4=RST(VCC), 5=CONT, 6=THRES, 7=DISCH, 8=VCC
-    def connect(ref, pad_num, net_name):
+    # Connect Pads to Nets
+    connections = [
+        ('U1', 1, 'GND'), ('U1', 2, 'TRIG_THRES'), ('U1', 3, 'OUT'), ('U1', 4, 'VCC'),
+        ('U1', 5, 'CTRL'), ('U1', 6, 'TRIG_THRES'), ('U1', 7, 'DISCH'), ('U1', 8, 'VCC'),
+        ('R1', 1, 'VCC'), ('R1', 2, 'DISCH'),
+        ('R2', 1, 'DISCH'), ('R2', 2, 'TRIG_THRES'),
+        ('C1', 1, 'TRIG_THRES'), ('C1', 2, 'GND'),
+        ('C2', 1, 'CTRL'), ('C2', 2, 'GND'),
+        ('D1', 1, 'OUT'), ('D1', 2, 'LED_K'),
+        ('R3', 1, 'LED_K'), ('R3', 2, 'VCC')
+    ]
+
+    for ref, pad_num, net_name in connections:
         pad = fps[ref].FindPadByNumber(str(pad_num))
         if pad and net_name in net_map:
             pad.SetNet(net_map[net_name])
-            log_call(f"fps['{ref}'].FindPadByNumber('{pad_num}').SetNet(net_map['{net_name}'])")
 
-    connect('U1', 1, 'GND')
-    connect('U1', 2, 'TRIG_THRES')
-    connect('U1', 3, 'OUT')
-    connect('U1', 4, 'VCC')
-    connect('U1', 5, 'CTRL')
-    connect('U1', 6, 'TRIG_THRES')
-    connect('U1', 7, 'DISCH')
-    connect('U1', 8, 'VCC')
+    # Routing logic (Star topology to simplify)
+    def route_net(net_name):
+        pads = []
+        for ref, pad_num, n in connections:
+            if n == net_name:
+                pad = fps[ref].FindPadByNumber(str(pad_num))
+                pads.append(pad.GetPosition())
 
-    connect('R1', 1, 'VCC')
-    connect('R1', 2, 'DISCH')
-    connect('R2', 1, 'DISCH')
-    connect('R2', 2, 'TRIG_THRES')
-    connect('C1', 1, 'TRIG_THRES')
-    connect('C1', 2, 'GND')
-    connect('C2', 1, 'CTRL')
-    connect('C2', 2, 'GND')
-    connect('D1', 1, 'OUT')
-    connect('D1', 2, 'LED_K')
-    connect('R3', 1, 'LED_K')
-    connect('R3', 2, 'VCC')
+        if len(pads) > 1:
+            for i in range(len(pads) - 1):
+                p1 = pads[i]
+                p2 = pads[i+1]
+                # Draw L-shape track
+                t1 = pcbnew.PCB_TRACK(board)
+                t1.SetStart(p1)
+                t1.SetEnd(pcbnew.VECTOR2I(p2.x, p1.y))
+                t1.SetLayer(pcbnew.F_Cu)
+                t1.SetWidth(mm_to_iu(0.25))
+                t1.SetNet(net_map[net_name])
+                board.Add(t1)
 
-    # Add tracks for a few nets to demonstrate
-    def add_track(start_pos, end_pos, net_name):
-        track = pcbnew.PCB_TRACK(board)
-        track.SetStart(pcbnew.VECTOR2I(mm_to_iu(start_pos[0]), mm_to_iu(start_pos[1])))
-        track.SetEnd(pcbnew.VECTOR2I(mm_to_iu(end_pos[0]), mm_to_iu(end_pos[1])))
-        track.SetLayer(pcbnew.F_Cu)
-        track.SetWidth(mm_to_iu(0.25))
-        if net_name in net_map:
-            track.SetNet(net_map[net_name])
-        board.Add(track)
-        log_call(f"board.Add(pcbnew.PCB_TRACK(board)) # {net_name}")
+                t2 = pcbnew.PCB_TRACK(board)
+                t2.SetStart(pcbnew.VECTOR2I(p2.x, p1.y))
+                t2.SetEnd(p2)
+                t2.SetLayer(pcbnew.F_Cu)
+                t2.SetWidth(mm_to_iu(0.25))
+                t2.SetNet(net_map[net_name])
+                board.Add(t2)
 
-    # Sample tracks
-    add_track((100, 100), (115, 110), 'GND') # Dummy path for GND
-    add_track((100, 95), (115, 95), 'VCC')  # Dummy path for VCC
+    for net_name in nets:
+        route_net(net_name)
 
     # Board Outline
     outline_rect = [(80, 85), (130, 85), (130, 120), (80, 120), (80, 85)]
@@ -109,7 +112,6 @@ def generate_pcb():
         board.Add(seg)
 
     pcbnew.SaveBoard(board_path, board)
-    log_call(f"pcbnew.SaveBoard('{board_path}', board)")
 
 if __name__ == "__main__":
     generate_pcb()
