@@ -1,8 +1,8 @@
 # Project goal
 Create a simple 555 circuit with LED blinking at 1Hz with 30% active / 70% dark cycle time as KiCAD project with schematic and PCB.
-- Use SKiDL to design the schematics.
-- Use KiCAD IPC API to design the board.
-- Verify the ERC and DRC with KiBot.
+- Use SKiDL to design the schematics and store in a ".kicad_sch" file.
+- Use KiCAD IPC API to design the board and store in a ".kicad_pcb" file.
+- Verify the ERC and DRC with KiBot and add the same verification to the GitHub workflow.
 
 # Details
 Use Kibot in the GitHub action workflow to run th ERC and DRC after each push on every branch. Validate the workflow locally:
