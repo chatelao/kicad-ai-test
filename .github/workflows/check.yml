@@ -1,0 +1,23 @@
+name: Hardware Verification
+
+on: [push, pull_request]
+
+jobs:
+  erc_drc:
+    runs-on: ubuntu-latest
+    container:
+      image: setsoft/kicad_auto:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run ERC
+        run: /usr/bin/kicad-cli sch erc 555.kicad_sch
+
+      - name: Run DRC
+        run: /usr/bin/kicad-cli pcb drc 555.kicad_pcb
+
+      - name: Run Kibot (Export and Check)
+        run: |
+          kibot --help
+          # Kibot can be used for more advanced checks if a .kibot.yaml is provided

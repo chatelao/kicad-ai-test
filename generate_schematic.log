@@ -1,0 +1,26 @@
+WARNING: KICAD_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/app/<frozen importlib._bootstrap_external>:999=>/app/<frozen importlib._bootstrap>:488]
+WARNING: KICAD9_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/app/<frozen importlib._bootstrap_external>:999=>/app/<frozen importlib._bootstrap>:488]
+WARNING: KICAD6_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/app/<frozen importlib._bootstrap_external>:999=>/app/<frozen importlib._bootstrap>:488]
+WARNING: KICAD8_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/app/<frozen importlib._bootstrap_external>:999=>/app/<frozen importlib._bootstrap>:488]
+WARNING: KICAD7_SYMBOL_DIR environment variable is missing, so the default KiCad symbol libraries won't be searched. @ [/app/<frozen importlib._bootstrap_external>:999=>/app/<frozen importlib._bootstrap>:488]
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: Missing tag on NE555P instantiated at /app/generate_schematic.py:29.
+WARNING: Random tag TKFNNCDF1K generated for NE555P.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:30.
+WARNING: Random tag UiHaOeKYXZ generated for R.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:31.
+WARNING: Random tag ET66jGE7y8 generated for R.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:32.
+WARNING: Random tag 1UQpcijwVZ generated for R.
+WARNING: Missing tag on C_Polarized instantiated at /app/generate_schematic.py:33.
+WARNING: Random tag caEFszxWnp generated for C_Polarized.
+WARNING: Missing tag on C instantiated at /app/generate_schematic.py:34.
+WARNING: Random tag 0Pt_Q1oFBZ generated for C.
+WARNING: Missing tag on LED instantiated at /app/generate_schematic.py:35.
+WARNING: Random tag o3LO7yYi5T generated for LED.
+WARNING: Missing tag on  instantiated at /app/<frozen importlib._bootstrap>:488.
+INFO: 19 warnings found while generating netlist.
+INFO: 0 errors found while generating netlist.
