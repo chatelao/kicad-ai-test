@@ -1,0 +1,41 @@
+name: KiCad CI
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  erc_drc:
+    runs-on: ubuntu-latest
+    container: setsoft/kicad_auto:latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate Schematic and Netlist
+        run: |
+          pip install skidl==2.2.0
+          export KICAD_SYMBOL_DIR="/usr/share/kicad/symbols"
+          export KICAD6_SYMBOL_DIR="/usr/share/kicad/symbols"
+          export KICAD7_SYMBOL_DIR="/usr/share/kicad/symbols"
+          export KICAD8_SYMBOL_DIR="/usr/share/kicad/symbols"
+          export KICAD9_SYMBOL_DIR="/usr/share/kicad/symbols"
+          python3 design_schematic.py
+
+      - name: Generate PCB
+        run: |
+          # Ensure PYTHONPATH is set if needed in container
+          export PYTHONPATH="/usr/lib/python3/dist-packages:$PYTHONPATH"
+          python3 design_pcb.py
+
+      - name: Run ERC and DRC with KiBot
+        run: |
+          kibot -c config.kibot.yaml -e 555.kicad_sch -b 555.kicad_pcb
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-reports
+          path: verification/
