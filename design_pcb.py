@@ -21,6 +21,8 @@ def create_board():
         'TRIG_THRES': pcbnew.NETINFO_ITEM(board, 'TRIG_THRES'),
         'OUT_LED': pcbnew.NETINFO_ITEM(board, 'OUT_LED')
     }
+    # board.Add(net) is used in some versions, AppendNet in others.
+    # We will try the most common way for modern KiCad
     for net in nets.values():
         board.Add(net)
 

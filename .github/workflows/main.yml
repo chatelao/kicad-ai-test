@@ -15,6 +15,7 @@ jobs:
 
       - name: Generate Schematic and Netlist
         run: |
+          python3 -m ensurepip --upgrade
           python3 -m pip install skidl==2.2.0
           export KICAD_SYMBOL_DIR="/usr/share/kicad/symbols"
           export KICAD6_SYMBOL_DIR="/usr/share/kicad/symbols"
