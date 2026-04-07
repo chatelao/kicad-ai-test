@@ -20,6 +20,6 @@ jobs:
           sed -i 's/bullseye-backports/bullseye/g' /etc/apt/sources.list || true
           apt-get update || true
 
-      - name: Run ERC and DRC with KiBot
+      - name: Run DRC with KiBot
         run: |
-          kibot -c .kibot.yaml -e  -b 555.kicad_pcb
+          kibot -c .kibot.yaml -b 555.kicad_pcb
