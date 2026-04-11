@@ -1,0 +1,21 @@
+WARNING: Missing tag on NE555P instantiated at /app/design.py:12.
+WARNING: Random tag 6qMjE3cqo6 generated for NE555P.
+WARNING: Missing tag on R instantiated at /app/design.py:13.
+WARNING: Random tag tbr9qiYDiX generated for R.
+WARNING: Missing tag on R instantiated at /app/design.py:14.
+WARNING: Random tag 6IPvv4qjo9 generated for R.
+WARNING: Missing tag on C_Polarized instantiated at /app/design.py:15.
+WARNING: Random tag wgfmVmoMsk generated for C_Polarized.
+WARNING: Missing tag on C instantiated at /app/design.py:16.
+WARNING: Random tag 2ILquA8z7t generated for C.
+WARNING: Missing tag on LED instantiated at /app/design.py:17.
+WARNING: Random tag TMdj1xbrsQ generated for LED.
+WARNING: Missing tag on R instantiated at /app/design.py:18.
+WARNING: Random tag DndXQxexUD generated for R.
+WARNING: Missing tag on Conn_01x02_Pin instantiated at /app/design.py:19.
+WARNING: Random tag oE0ZMPN1Hk generated for Conn_01x02_Pin.
+WARNING: Missing tag on  instantiated at /app/<frozen importlib._bootstrap>:488.
+INFO: 17 warnings found while generating netlist.
+INFO: 0 errors found while generating netlist.
+
+WARNING: Missing tag on  instantiated at /app/<frozen importlib._bootstrap>:488.
