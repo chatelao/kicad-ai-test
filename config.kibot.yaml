@@ -1,0 +1,16 @@
+kibot:
+  version: 1
+
+preflight:
+  run_erc: true
+  run_drc: true
+
+outputs:
+  - name: 'erc_report'
+    comment: 'ERC report'
+    type: 'erc'
+    dir: 'verification/erc'
+  - name: 'drc_report'
+    comment: 'DRC report'
+    type: 'drc'
+    dir: 'verification/drc'
