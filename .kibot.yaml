@@ -1,0 +1,10 @@
+kibot:
+  version: 1
+
+pre_flight:
+  check_zone_fills: false
+  run_erc: false
+  run_drc: true
+
+# No outputs needed, we just want pre_flight to run DRC
+outputs: []

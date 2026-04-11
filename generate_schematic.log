@@ -1,0 +1,29 @@
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: fp-lib-table file was not found. Component footprints are not available.
+WARNING: Schematic generation is not implemented for KiCad version 8. @ [/app/generate_schematic.py:62]
+INFO: 5 warnings found while generating schematic.
+INFO: 0 errors found while generating schematic.
+
+WARNING: Missing tag on NE555P instantiated at /app/generate_schematic.py:17.
+WARNING: Random tag xOaZkWthtx generated for NE555P.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:18.
+WARNING: Random tag dOeJNMaFwh generated for R.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:19.
+WARNING: Random tag RcARwGDlpF generated for R.
+WARNING: Missing tag on C_Polarized instantiated at /app/generate_schematic.py:20.
+WARNING: Random tag mfrHopwylJ generated for C_Polarized.
+WARNING: Missing tag on C instantiated at /app/generate_schematic.py:21.
+WARNING: Random tag k_KRMp5t5y generated for C.
+WARNING: Missing tag on D instantiated at /app/generate_schematic.py:22.
+WARNING: Random tag FPEpJKsh3K generated for D.
+WARNING: Missing tag on LED instantiated at /app/generate_schematic.py:23.
+WARNING: Random tag 6VUkTRFmuD generated for LED.
+WARNING: Missing tag on R instantiated at /app/generate_schematic.py:24.
+WARNING: Random tag lTb7Ohvj5K generated for R.
+WARNING: Missing tag on Conn_01x02_Pin instantiated at /app/generate_schematic.py:25.
+WARNING: Random tag Ql3TR5uDlW generated for Conn_01x02_Pin.
+WARNING: Missing tag on  instantiated at /app/<frozen importlib._bootstrap>:488.
+INFO: 23 warnings found while generating netlist.
+INFO: 0 errors found while generating netlist.
