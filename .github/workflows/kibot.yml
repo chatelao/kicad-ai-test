@@ -1,0 +1,13 @@
+name: Kibot
+on: [push]
+jobs:
+  kibot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Kibot
+        uses: setsoft/kicad_auto:latest
+        with:
+          config: config.kibot.yaml
+          board: project.kicad_pcb
+          schema: project.kicad_sch
