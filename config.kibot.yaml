@@ -1,0 +1,30 @@
+kibot:
+  version: 1
+
+pre_flight:
+  check_zone_fills: true
+  ignore_unconnected: false
+
+outputs:
+  - name: 'ERC report'
+    comment: 'Electrical Rules Check'
+    type: erc
+    dir: reports
+    options:
+      output: erc_report.txt
+
+  - name: 'DRC report'
+    comment: 'Design Rules Check'
+    type: drc
+    dir: reports
+    options:
+      output: drc_report.txt
+
+  - name: 'PCB PDF'
+    comment: 'PCB Top and Bottom'
+    type: pcb_print
+    dir: outputs
+    options:
+      pages:
+        - layers: [F.Cu, B.Cu, Edge.Cuts, F.SilkS, B.SilkS]
+          sheet: 'PCB'
