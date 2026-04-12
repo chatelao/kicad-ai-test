@@ -1,0 +1,5 @@
+- Connect to KiCad at ipc:///tmp/kicad/api.sock
+- Connect to KiCad at ipc:///tmp/kicad/api.sock
+- Connect to KiCad at ipc:///tmp/kicad/api.sock
+- Connect to KiCad at ipc:///tmp/kicad/api.sock
+- Connect to KiCad at ipc:///tmp/kicad/api.sock
